@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+body{
+    background-color: black;
+}
+
+#logo-ps {
+    height: auto;
+    width: 31.5rem;
+    margin: 5rem 0;
+
+}
+
+
+
+/* Configurando o grid */
+.grid {
+    background-color: #1D1D1D;
+    width: 100%;
+    height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    min-width: 250px;
+
+
+
+}
+
+
+.grid > p >img {
+    height: 18.75rem;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.grid > p >img:hover {
+    transform: scale(1.08);
+}
+
+
+.grid > p {
+    text-align: center;   /* deixando as fotos centralizadas no container */
+    
+}
+
+
+
+/* Dispositivos mobile */
+@media (max-width:518px){
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+    }
+    .grid > p >img {
+        height: 20rem;
+    }
+    #logo-ps {
+        width: 95vw;
+    }
+}
